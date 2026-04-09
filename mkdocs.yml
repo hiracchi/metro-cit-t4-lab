@@ -1,0 +1,16 @@
+site_name: 情報通信工学実験実習 III (情報工学)
+# theme: readthedocs
+theme: material
+
+plugins:
+  - search:
+      lang: 'ja'
+#  - with-pdf:
+#      output_path: "docs.pdf"
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
