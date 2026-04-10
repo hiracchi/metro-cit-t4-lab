@@ -1,6 +1,7 @@
-# 情報工学 (2) ルータの設定とルートの確認
+# 情報工学2 ~ルータの設定とルートの確認~
 
-本実験は2回分（4時限分x2）を想定している。
+本実験は2回分（4時限分 × 2）を想定する。
+
 実験レポートのファイル名は `T4情報工学2_[学生番号]_[氏名].pdf` とすること。
 
 ## 1. 目的
@@ -12,11 +13,11 @@
 ルータには、ローカル接続ネットワークやリモートネットワークへメッセージを送信するためのルート(経路)情報が格納されたルーティングテーブルがある。
 
 ### 2.2 ルータの設定
-パソコンとルータをコンソールケーブルで接続し、ターミナルエミュレータを使ってCisco IOSで設定する。
+パソコンとルータをコンソールケーブルで接続し、ターミナルを使ってルーターを設定する。
 
-* ユーザEXECモード (`Router>`): デバイスの動作状態調べや`ping`、`traceroute`のみ可能。
-* 特権EXECモード (`Router#`): `enable`コマンドで移行し、設定コマンドへのアクセスが可能。
-* グローバル設定モード (`Router(config)#`): `configure terminal`コマンドで移行し、インターフェイス設定等を行う。
+- ユーザ EXEC モード (`Router>`): デバイスの動作状態を調べる、`ping`、`traceroute` のみ可能。
+- 特権 EXEC モード (`Router#`): `enable` コマンドで移行し、設定コマンドへのアクセスが可能。
+- グローバル設定モード (`Router(config)#`): `configure terminal` コマンドで移行し、インターフェイス設定等を行う。
 
 ### 2.3 RIP (Routing Information Protocol)
 パス選択のメトリックとしてホップカウントを使用するルーティングプロトコル。ルーティングテーブルの内容をデフォルトで30秒ごとに送信し、新しいルートの情報を隣接ルータに通知する。
@@ -35,8 +36,8 @@ Router(config-router)# network [network-number]
 下記ネットワーク図を参考にしてネットワークアドレスとサブネットマスクを決定し、すべてのインターフェイスにIPアドレスを割り当てる。
 
 ### 3.2 PCのインターフェース設定
-1. Linuxを起動する(電源を入れてF9)。
-2. イーサネットインターフェースにIPアドレス、デフォルトルートを設定する(付録を参照)。
+1. Linux を起動する（電源を入れて F9）。
+2. イーサネットインターフェースに IP アドレス、デフォルトルートを設定する（付録を参照）。
 
 ### 3.3 ルータのインタフェース設定
 1. PCのUSBポートとルーターのコンソールポートをコンソールケーブルで接続する。
@@ -50,8 +51,8 @@ Router(config-router)# network [network-number]
 show interface
 ```
 
-    `FastEthernet0/0`、`GigabitEthernet0/0`、`Serial0/0/0` などを確認する。スペースキーでページ送りされる。
-7. イーサネットインターフェースにIPアドレスを設定する(付録を参照)。
+`FastEthernet0/0`、`GigabitEthernet0/0`、`Serial0/0/0` などを確認する（スペースキーでページ送りされる）。
+7. イーサネットインターフェースに IP アドレスを設定する（付録を参照）。
 
 ### 3.4 最終配線とルータ・PC設定
 1. 各機器をストレートケーブルやシリアルケーブル、クロスケーブルで配線する。
@@ -77,6 +78,7 @@ RIP情報がすべてのルータに行き渡るように数分待ってから `
 
 ## 5. 参考ネットワーク図
 
+### 5.1 ネットワーク図(完全)
 ```mermaid
 graph LR
     %% 端末とスイッチの接続
@@ -110,6 +112,64 @@ graph LR
     router5 -- クロスケーブル --- router9
     router6 -- クロスケーブル --- router9
     router7 -- クロスケーブル --- router10
+    router8 -- クロスケーブル --- router10
+
+    router9 -- シリアルケーブル --- router10
+
+
+    %% スタイルの定義
+    subgraph Local_Network1
+        PC1
+        PC2
+        HUB1
+    end
+    subgraph Local_Network2
+        PC3
+        PC4
+        HUB2
+    end
+    subgraph Local_Network3
+        PC5
+        PC6
+        HUB3
+    end
+    subgraph Local_Network4
+        PC7
+        PC8
+        HUB4
+    end
+```
+
+### 5.1 ネットワーク図(切断状態)
+```mermaid
+graph LR
+    %% 端末とスイッチの接続
+    PC1 --- HUB1
+    PC2 --- HUB1
+    PC3 --- HUB2
+    PC4 --- HUB2
+    PC5 --- HUB3
+    PC6 --- HUB3
+    PC7 --- HUB4
+    PC8 --- HUB4
+
+    %% スイッチとメインルーターの接続
+    HUB1 --- router1
+    HUB2 --- router2
+    HUB3 --- router3
+    HUB4 --- router4
+
+    %% ルーター間の接続
+    router1 -- シリアルケーブル --- router2
+    router3 -- シリアルケーブル --- router4
+
+    router1 -- クロスケーブル --- router5
+    router3 -- クロスケーブル --- router7
+
+    router5 -- シリアルケーブル --- router6
+    router7 -- シリアルケーブル --- router8
+
+    router6 -- クロスケーブル --- router9
     router8 -- クロスケーブル --- router10
 
     router9 -- シリアルケーブル --- router10
