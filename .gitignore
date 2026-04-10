@@ -1,0 +1,28 @@
+# Build output
+site/
+
+# Python virtual environment
+.venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Test/coverage output
+.coverage
+htmlcov/
+
+# macOS
+.DS_Store
+
+# Local environment settings
+.envrc
+
+# Keep reproducibility files tracked
+!.python-version
+!uv.lock
