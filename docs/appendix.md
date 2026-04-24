@@ -44,7 +44,7 @@ no shutdown
 
 ```text
 router rip
-network [network-number]
+network [network-address] # 例: network 192.168.1.0
 ```
 
 - ルーティングテーブルの確認
@@ -88,4 +88,3 @@ ifconfig eth0 [IP address] netmask [netmask] # 例: ifconfig eth0 192.168.1.1 ne
 ```text
 route add default gw [gateway address] # 例: route add default gw 192.168.1.2
 ```
-

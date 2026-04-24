@@ -26,7 +26,7 @@
 
 ```text
 Router(config)# router rip
-Router(config-router)# network [network-number]
+Router(config-router)# network [network-address] # 例: network 192.168.1.0
 ```
 
 設定後、リモートネットワークのデバイスへ `ping` を実行したり、`show ip route` コマンドでルーティングテーブルを確認して動作を検証する。
