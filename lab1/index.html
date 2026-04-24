@@ -1,0 +1,1010 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../lab2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>情報工学1 - 情報通信工学実験実習 III (情報工学)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="情報通信工学実験実習 III (情報工学)" class="md-header__button md-logo" aria-label="情報通信工学実験実習 III (情報工学)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            情報通信工学実験実習 III (情報工学)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              情報工学1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="情報通信工学実験実習 III (情報工学)" class="md-nav__button md-logo" aria-label="情報通信工学実験実習 III (情報工学)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    情報通信工学実験実習 III (情報工学)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    情報工学1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    情報工学1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 目的
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 理論
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 理論">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 ツイストペアケーブル
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-csmacd-carrier-sense-multiple-access-with-collision-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 CSMA/CD (Carrier Sense Multiple Access with Collision Detection)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-csmaca-carrier-sense-multiple-access-with-collision-avoidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 物理アドレス、論理アドレス
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 ネットワーク接続機器
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 実験・実習
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 実験・実習">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 ネットワークケーブル（ストレート）の作成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 リピータハブを使ったネットワークパフォーマンス（転送速度）測定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 スイッチングハブを使ったネットワークパフォーマンス（転送速度）測定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-lan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 無線LANを使ったネットワークパフォーマンス（転送速度）測定
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 無線LANを使ったネットワークパフォーマンス（転送速度）測定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ネットワークパフォーマンス測定法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        結果と考察のまとめ方
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 課題
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    情報工学2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    付録
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 目的
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 理論
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 理論">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 ツイストペアケーブル
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-csmacd-carrier-sense-multiple-access-with-collision-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 CSMA/CD (Carrier Sense Multiple Access with Collision Detection)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-csmaca-carrier-sense-multiple-access-with-collision-avoidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 物理アドレス、論理アドレス
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 ネットワーク接続機器
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 実験・実習
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 実験・実習">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 ネットワークケーブル（ストレート）の作成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 リピータハブを使ったネットワークパフォーマンス（転送速度）測定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 スイッチングハブを使ったネットワークパフォーマンス（転送速度）測定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-lan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 無線LANを使ったネットワークパフォーマンス（転送速度）測定
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 無線LANを使ったネットワークパフォーマンス（転送速度）測定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ネットワークパフォーマンス測定法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        結果と考察のまとめ方
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 課題
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="1">情報工学1 ~ケーブル作成とネットワークパフォーマンス測定~</h1>
+<p>本実験は1回分（4時限分）を想定している。
+実験レポートのファイル名は <code>T4情報工学1_[学生番号]_[氏名].pdf</code> とすること。</p>
+<h2 id="1_1">1. 目的</h2>
+<p>ネットワークケーブルとしてもっともよく使用されているツイストペアケーブルの構造を理解し、実際に作成する。また、コンピュータネットワークにおいて、ハブ(リピータハブ、スイッチングハブ)の役割を理解し、ネットワークパフォーマンスを測定する。</p>
+<h2 id="2">2. 理論</h2>
+<h3 id="21">2.1 ツイストペアケーブル</h3>
+<p>通常、UTPケーブル(shielded Twist Pair cab)はRJ-45コネクタで結線される。
+RJ-45コネクタはオス型コンポーネントであり、ケーブルの端部に圧着される。
+オス型コネクタを金属製の接合部を下にして前面から見た場合、
+左から順に1番から 8番までのピン番号が割り振られている。
+ジャックはメス型コンポーネントと考えることができる。
+それらはネットワークデバイスや壁の差込口にあり、ケーブルのRJ-45コネクタをジャックに差し込むことで接続される。</p>
+<p>圧着工具を使用すれば自分でも結線でき、ノイズを少なくするためによりを戻すケーブルの長さを短くし、
+ケーブルをコネクタに完全に差し込んで被覆に圧着するようにする。
+これにより十分な電気接合としっかりとした導線接続が得られる。</p>
+<h3 id="22-csmacd-carrier-sense-multiple-access-with-collision-detection">2.2 CSMA/CD (Carrier Sense Multiple Access with Collision Detection)</h3>
+<p>搬送波感知多重アクセス/衝突検出方式。
+CSMA/CDはLANで利用される通信方式の1つで、Ethernetが採用している。
+データを送信したいコンピュータはケーブルの通信状況を監視し(Carrier Sense)、ケーブルが空くと送信を開始する。
+衝突が起きた場合は(Collision Detection)、両者は送信を中止し、ランダムな時間待って送信を再開する。</p>
+<h3 id="23-csmaca-carrier-sense-multiple-access-with-collision-avoidance">2.3 CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)</h3>
+<p>無線LANでは送信中に衝突を直接検出しにくいため、CSMA/CA（衝突回避）を利用する。
+端末はまずチャネルの利用状況を確認し、一定時間（IFS）待機した後、ランダムなバックオフ時間を設けてから送信する。
+もし他端末の送信を検知した場合はバックオフを延長して再試行し、同時送信の確率を下げる。
+また、受信側からACK（受信確認）を返すことで、フレームが正しく届いたかを確認する。必要に応じてRTS/CTSを使い、隠れ端末問題による衝突も軽減する。</p>
+<h3 id="24">2.4 物理アドレス、論理アドレス</h3>
+<p>本資料で「IPアドレス」と記す場合は、とくに注記がない限りIPv4を指す。</p>
+<ul>
+<li>MACアドレス (物理アドレス): すべてのイーサネットネットワークインターフェイスは、製造段階で割り当てられた48bitのMACアドレスを持っている。2桁の16進数の6つの組合せで表される。</li>
+<li>IPアドレス (論理アドレス): IPネットワークでメッセージの送受信を行うために割り当てられる32ビットアドレス。一般に「ネットワーク部」と「ホスト部」に分かれ、10進数に変換してドットで区切って表記する（例: 192.168.1.106）。</li>
+<li>サブネットマスク: IPアドレスのどこまでがネットワーク部かを示す値。ネットワーク部は1、ホスト部は0で表される（例: 255.255.255.0）。CIDR表記では、先頭から連続する1のビット数を <code>/24</code> のように表す（例: <code>255.255.255.0 = /24</code>）。
+  サブネットマスクが必要になった理由は、IPアドレスだけでは「どこまでがネットワーク部か」を一意に判定できないためである。組織ごとにネットワークを細かく分割し、アドレス空間をムダなく使い、ルータが適切に経路選択できるようにするために用いられる。</li>
+<li>ネットワークアドレス: 同一ネットワーク全体を表すアドレス。IPアドレスとサブネットマスクをビットごとにAND演算して求める。
+  例として、<code>192.168.1.106/255.255.255.0</code> のネットワークアドレスは <code>192.168.1.0</code> となる。</li>
+</ul>
+<p>CIDR・サブネットマスク早見表:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">CIDR</th>
+<th style="text-align: left;">サブネットマスク</th>
+<th style="text-align: center;">ホスト部ビット数</th>
+<th style="text-align: right;">1サブネットあたり利用可能ホスト数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">/8</td>
+<td style="text-align: left;">255.0.0.0</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: right;">16,777,214</td>
+</tr>
+<tr>
+<td style="text-align: center;">/16</td>
+<td style="text-align: left;">255.255.0.0</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: right;">65,534</td>
+</tr>
+<tr>
+<td style="text-align: center;">/24</td>
+<td style="text-align: left;">255.255.255.0</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: right;">254</td>
+</tr>
+<tr>
+<td style="text-align: center;">/25</td>
+<td style="text-align: left;">255.255.255.128</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: right;">126</td>
+</tr>
+<tr>
+<td style="text-align: center;">/26</td>
+<td style="text-align: left;">255.255.255.192</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: right;">62</td>
+</tr>
+<tr>
+<td style="text-align: center;">/27</td>
+<td style="text-align: left;">255.255.255.224</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td style="text-align: center;">/28</td>
+<td style="text-align: left;">255.255.255.240</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr>
+<td style="text-align: center;">/29</td>
+<td style="text-align: left;">255.255.255.248</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">/30</td>
+<td style="text-align: left;">255.255.255.252</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>プライベートアドレス:
+  組織内LANで利用するために予約されたIPv4アドレス。インターネット上ではそのままルーティングされない。
+  クラス分類の対応でみると、Class A 相当が <code>10.0.0.0/8</code>、Class B 相当が <code>172.16.0.0/12</code>、Class C 相当が <code>192.168.0.0/16</code> である。
+  現在の実運用はクラスレス（CIDR）が前提だが、範囲を覚える際にA/B/Cの呼び方が使われることがある。</li>
+<li>NAT (Network Address Translation):
+  ルータやファイアウォールでIPアドレスを書き換える技術。内部のプライベートアドレスを外部のグローバルアドレスへ変換し、外部ネットワークと通信できるようにする。</li>
+<li>IPマスカレード:
+  NATの一種（多対一変換、NAPT/PAT）。複数の内部端末が1つのグローバルIPアドレスを共有できるように、送信元ポート番号も合わせて変換・管理する。</li>
+</ul>
+<p>例として、複数PC（192.168.1.x）が家庭用ルータを経由してインターネットに接続する場合、外部からはルータの1つのグローバルIPアドレスとして見える。</p>
+<h3 id="25">2.5 ネットワーク接続機器</h3>
+<p>ネットワークを接続するための機器として、ハブとルータがある。</p>
+<ul>
+<li>リピータハブ: 1つのポートから受信したデータをそのまま他のすべてのポートに送信する。</li>
+<li>スイッチングハブ: MACアドレステーブルを持ち、送信元ポートと宛先ポートの間に回線と呼ばれる一時的な接続を作成するため、衝突が発生しない。</li>
+<li>ルータ: IPアドレスを元にネットワークとネットワークを接続する。ルータとスイッチングハブの両方の機能を持つL3スイッチも存在する。</li>
+</ul>
+<h2 id="3">3. 実験・実習</h2>
+<h3 id="31">3.1 ネットワークケーブル（ストレート）の作成</h3>
+<ol>
+<li>ワイヤストリッパを使って、約5 cm被覆を取り除く。</li>
+<li>ANSI/TIA-568規格(T568B配線)にしたがって、ケーブルをまっすぐに伸ばしながら色の順番に並べる（白橙、橙、白緑、青、白青、緑、白茶、茶）。</li>
+<li>ケーブルを約1.5 cmに切断し、RJ-45コネクタに挿入する。</li>
+<li>圧着工具で圧着し、反対側も同様に作成後、ケーブルテスタで接続を確認する。</li>
+</ol>
+<p><img alt="T568AとT568Bの配線図" src="../images/568_A_and_568_B.png" /></p>
+<p>出典: <a href="https://commons.wikimedia.org/wiki/File:568_A_and_568_B.svg">https://commons.wikimedia.org/wiki/File:568_A_and_568_B.svg</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ピン番号</th>
+<th style="text-align: left;">線の色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">白橙</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">橙</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">白緑</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">青</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">白青</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">緑</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">白茶</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">茶</td>
+</tr>
+</tbody>
+</table>
+<p>RJ-45コネクタを正面（金属製の接合部を下にした前面）から見た場合、左から右へこの順番（1番から8番）に並べて挿入する。</p>
+<h3 id="32">3.2 リピータハブを使ったネットワークパフォーマンス（転送速度）測定</h3>
+<ol>
+<li>各PCのイーサネットケーブルを抜き、校内LANから抜ける</li>
+<li>Linuxを起動する(電源を入れてF9キー)</li>
+<li>自作したケーブルで1つのハブにつき6台(程度)のコンピュータ（PC1, PC2, ...）を接続する。各PCのIPアドレスを適切に設定し、同一のネットワークに参加できるように設計する。レポートの実験項にはネットワーク図を用意すること。</li>
+<li><code>ifconfig</code>コマンドで物理アドレスと論理アドレスを調べる。ネットワーク上の各PCに <code>ping</code>コマンドを発行し、接続できていることを確認する。</li>
+<li>PCの組み合わせ(例: PC1-PC2, PC3-PC4, PC5-PC6)間で <strong>個別に</strong> ネットワークパフォーマンスを測定する。ネットワークパフォーマンスの測定と結果・考察のまとめ方は下記を参照すること。以下の測定でも同様である。</li>
+<li>すべてのPCの組み合わせで同時にネットワークパフォーマンスを測る。これで輻輳したときのネットワークパフォーマンスがわかる。</li>
+</ol>
+<h3 id="33">3.3 スイッチングハブを使ったネットワークパフォーマンス（転送速度）測定</h3>
+<p>ハブをスイッチングハブに替え、上記と同様にパフォーマンスを測定する。</p>
+<h3 id="34-lan">3.4 無線LANを使ったネットワークパフォーマンス（転送速度）測定</h3>
+<p>ハブを無線LANアクセスポイントおよびコンバータに替え、同様に測定する。
+実際に使用したネットワークに応じて、レポートの実験項にネットワーク図を用意するのを忘れないこと。</p>
+<h4 id="_1">ネットワークパフォーマンス測定法</h4>
+<p>サーバー側で <code>./netserver</code> を起動し、スレーブ側で <code>./netperf -H [Server-IP]</code> と入力して測定する（10秒間でThroughputが得られる）。</p>
+<h4 id="_2">結果と考察のまとめ方</h4>
+<p>ネットワークパフォーマンスを3回測定し、その結果とその結果から得られた平均を表にまとめ、考察せよ。</p>
+<h2 id="4">4. 課題</h2>
+<ol>
+<li>ツイストペアケーブルが4対に分かれ、それぞれが撚ってある理由を調べよ。</li>
+<li>CSMA/CDとCSMA/CAの具体的な違いは何か。</li>
+<li>スイッチングハブで衝突が発生しない理由は何か。</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
