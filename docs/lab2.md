@@ -42,13 +42,13 @@ Router(config-router)# network [network-address] # 例: network 192.168.1.0
 ### 3.3 ルータのインタフェース設定
 1. PCのUSBポートとルーターのコンソールポートをコンソールケーブルで接続する。
 2. ルーターのイーサネットポート(0)とハブを、自作のストレートケーブルで接続する。
-3. PCとルータをコンソールケーブルで接続し、ターミナルで `cu -s 9600 -1 /dev/ttyUSB0` 等のコマンドで接続する。
+3. ターミナルで `cu -s 9600 -l /dev/ttyUSB0` 等のコマンドを実行し、ルータに接続する。
 4. ルータの電源を入れる。
 5. Enterキーを押してプロンプト `Router>` が出ることを確認する。
 6. インターフェースを確認する。
 
 ```text
-show interface
+show interfaces
 ```
 
 `FastEthernet0/0`、`GigabitEthernet0/0`、`Serial0/0/0` などを確認する（スペースキーでページ送りされる）。
@@ -140,7 +140,7 @@ graph LR
     end
 ```
 
-### 5.1 ネットワーク図(切断状態)
+### 5.2 ネットワーク図(切断状態)
 ```mermaid
 graph LR
     %% 端末とスイッチの接続
